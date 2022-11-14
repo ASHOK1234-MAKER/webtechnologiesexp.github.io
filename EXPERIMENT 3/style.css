@@ -1,0 +1,179 @@
+* {
+    margin: 0%;
+}
+
+h1 {
+    background-color: aqua;
+}
+
+.box1 {
+    width: 33%;
+    height: 500px;
+    float: left;
+    background-size: cover;
+    position: relative;
+
+}
+
+.box2 {
+    width: 50%;
+    height: 300px;
+    float: left;
+    background-size: cover;
+}
+
+.box3 {
+    width: 50%;
+    height: 300px;
+    float: left;
+    background-size: cover;
+}
+
+#img {
+    width: 100%;
+    height: 500px;
+    background-image: url(https://www.karunya.edu/sites/default/files/img/images/karunya-campus-view.jpg.pagespeed.ce.IyizWonRVf.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#about {
+    background-color: bisque;
+}
+
+#about h2 {
+    text-align: center;
+}
+
+#img1 {
+    background-image: url(https://karunya.edu/sites/default/files/img/site/front/academics.jpg);
+    background-repeat: no-repeat;
+}
+
+#img2 {
+    background-image: url(https://karunya.edu/sites/default/files/img/site/campus-life/front-campus-life-1.jpg);
+    background-repeat: no-repeat;
+    }
+    
+    #img3 {
+        background-image: url(https://www.karunya.edu/img/ctc/1920_650.jpg.pagespeed.ce.DxZ-UoYHkN.jpg);
+        background-repeat: no-repeat;
+    }
+    
+    #img3:hover {
+        opacity: 30%;
+    }
+    
+    #img4 {
+        background-image: url(https://karunya.edu/sites/default/files/img/technology-mission/cyber-security.jpg);
+        background-repeat: no-repeat;
+    }
+    
+    .opc {
+        text-align: center;
+        color: white;
+        background-color: black;
+        opacity: 50%;
+    }
+    
+    .opc:hover {
+    
+        color: red;
+        background-color: black;
+        opacity: 1;
+    }
+    
+    #bottom {
+        position: absolute;
+        bottom: 10px;
+        width: 100%;
+    }
+    
+    .form {
+        padding: 20px;
+        width: 50%;
+        height: 200px;
+        align-items: center;
+
+        background-color: white;
+            border: 1px solid white;
+            position: absolute;
+            top: 40px;
+            left: 110px;
+        }
+        
+        .form h1 {
+            text-align: center;
+            color: black;
+            background-color: white;
+        }
+        
+        input,
+        label {
+            display: block;
+            width: 100%;
+        }
+        
+        input[type=submit] {
+            text-align: center;
+            margin-top: 40px;
+            width: 100%;
+            background-color: blue;
+            color: white;
+            border: none;
+            border-radius: 5px;
+        }
+        
+        input[type=text] {
+            border: none;
+            color: black;
+            border-radius: 5px;
+            outline: none;
+            margin-bottom: 10px;
+        }
+        
+        input[type=password] {
+            border: none;
+            color: black;
+            border-radius: 5px;
+            outline: none;
+            margin-bottom: 10px;
+        }
+        
+        input[type=text]:focus {
+            background-color: white;
+            outline: 1px solid blue;
+        }
+        
+        input[type=password]:focus {
+            background-color: white;
+
+            outline: 1px solid blue;
+            }
+            
+            .image5 {
+                float: left;
+                background-image: url(https://wallpapercave.com/wp/wp3734519.jpg);
+                background-repeat: no-repeat;
+                width: 50%;
+                height: 300px;
+                position: relative;
+                background-size: cover;
+            }
+            
+            .drone {
+                float: left;
+                text-align: justify;
+                background-color: bisque;
+                width: 50%;
+                height: 300px;
+            }
+            
+            .drone h2 {
+                text-align: left;
+                padding: 30px;
+            }
+            
+            .drone p {
+                padding: 30px;
+            }
