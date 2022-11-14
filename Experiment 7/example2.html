@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CAR RACE</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $('#reset').click(function() {
+                location.reload();
+            });
+            $(document).keydown(function(event){
+                var car11 = $("#car1").position().left;
+                if (parseInt(car11)>=1368){
+
+                    $('#rcar1').html("Car 1 has won the race!!!");
+                    $('#rcar2').hide();
+                    $('#car2').hide();
+
+                }
+                var car22 = $("#car2").position().left;
+                if (parseInt(car22)>=1368){
+
+                    $('#rcar2').html("Car 2 has won the race!!!");
+                    $('#rcar1').hide();
+                    $('#car1').hide();
+
+                }
+                
+
+                var car = $('#car1');
+                var key = event.which;
+                switch(key){
+                    case 37:  //left
+                              car.css('transform','rotateY(180deg)');  
+                              car.animate({left:'-=5px'},1);
+                              break;
+                    case 38:  //up
+                              car.css('transform','rotate(270deg)');  
+                              car.animate({top:'-=5px'},1);
+                              break;
+                    case 39:  //right
+                              car.css('transform','rotate(0deg)');  
+                              car.animate({left:'+=5px'},1);
+                              break;
+                    case 40:  //down
+                              car.css('transform','rotate(90deg)');
+                              car.animate({top:'+=5px'},1);
+                              break;
+                }
+                var car2 = $('#car2');
+                var key = event.which;
+                switch(key){
+                    case 65:  //left
+                              car2.css('transform','rotateY(180deg)');  
+                              car2.animate({left:'-=5px'},1);
+                              break;
+                    case 87:  //up
+                              car2.css('transform','rotate(270deg)');  
+                              car2.animate({top:'-=5px'},1);
+                              break;
+                    case 68:  //right
+                              car2.css('transform','rotate(0deg)');  
+                              car2.animate({left:'+=5px'},1);
+                              break;
+                    case 83:  //down
+                              car2.css('transform','rotate(90deg)');
+                              car2.animate({top:'+=5px'},1);
+                              break;
+                }
+            })
+        })
+    </script>
+    <style>
+        *{
+            text-align: center;
+           
+        }
+        #racetrack{
+            background: url("racetrack.jpg") center left repeat-x;
+            height: 500px;
+            border-right: dashed 10px white;
+            box-sizing: border-box;
+            margin: 40px 0;
+        }
+        img{
+            height: 100px;
+            width: 130px;
+        }
+        .car{
+            display: block;
+            position: relative;
+        }
+        #car1{
+
+            top: 30px;
+
+        }
+        #car2{
+
+            top: 250px;
+
+        }
+        #raceinfo{
+            width: 80%;
+            margin: 40px auto 0;
+            background: #333;
+            height: 200px;
+        }
+        #raceinfo h2{
+            color: white;
+            text-transform: uppercase;
+            border-bottom: solid 1px white;
+            padding: 20px 0;
+        }
+        .raceinfo{
+            font-size: 24px;
+            font-weight: bold;
+            color: white;
+            width: 50%;
+            float: left;
+        }
+        .raceinfo span{
+            display: block;
+            font-weight: normal;
+            font-size: 18px;
+            color: white;
+            padding-top: 20px;
+        }
+        #raceinfo1{
+            color: #77b82f;
+        }
+        #raceinfo2{
+            color: #b82f3e;
+        }
+        input[type="button"]{
+            background: #77b82f;
+            color: white;
+            padding: 10px 20px;
+            border: solid 1px #444;
+        }
+        .clearfix:after{
+            content: "";
+            display: table;
+            clear: both;
+        }
+        
+   
+    </style>
+</head>
+<body id = "race">
+    <h1>CAR RACE GAME</h1>
+    <input type="button" value="reset" id="reset">
+    <div id="racetrack">
+
+
+        <img id = "car1" class = "car" src="car1.png" alt="">
+        <img id = "car2" class = "car" src="car2.png" alt="">
+
+
+    </div>
+    <div id="raceinfo" class="clearfix">
+        <h2>results</h2>
+        <div id="raceinfo1" class="raceinfo">Car 1<span id="rcar1"></span></div>
+        <div id="raceinfo2" class="raceinfo">Car 2<span id="rcar2"></span></div>
+    </div>
+</body>
+</html>
