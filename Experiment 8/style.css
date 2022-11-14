@@ -1,0 +1,27 @@
+#abc{
+    background-color: lightblue;
+    width: 300px;
+    border: 5px solid blue;
+    padding: 50px;
+    margin: 20px;
+
+    
+    
+}
+
+#heading{
+    color:blue
+    
+}
+
+*{
+    color: blue;
+}
+
+p{
+    border: 2px solid blue;
+    color: aliceblue;
+    background-color: blue;
+
+    
+}
